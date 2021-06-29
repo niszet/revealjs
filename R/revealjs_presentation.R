@@ -86,6 +86,7 @@ revealjs_presentation <- function(incremental = FALSE,
                                   pandoc_args = NULL,
                                   extra_dependencies = NULL,
                                   md_extensions = NULL,
+                                  history = TRUE,
                                   ...) {
   
   # function to lookup reveal resource
@@ -138,8 +139,8 @@ revealjs_presentation <- function(incremental = FALSE,
   background_transition <- match.arg(background_transition, revealjs_transitions())
   args <- c(args, "--variable", paste("backgroundTransition=", background_transition, sep=""))
   
-  # use history
-  args <- c(args, pandoc_variable_arg("history", "true"))
+  # history
+  args <- c(args, pandoc_variable_arg("history", jsbool(history)))
   
   # additional reveal options
   if (is.list(reveal_options)) {
