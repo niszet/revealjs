@@ -57,7 +57,7 @@ $else$
      }
 $endif$
 
-    .reveal table {
+    .reveal table:not(.hljs-ln) {
       border-width: 1px;
       border-spacing: 2px;
       border-style: dotted;
@@ -66,7 +66,7 @@ $endif$
       font-size: 0.7em;
     }
 
-    .reveal table th {
+    .reveal table:not(.hljs-ln) th {
       border-width: 1px;
       padding-left: 10px;
       padding-right: 25px;
@@ -75,7 +75,7 @@ $endif$
       border-color: gray;
     }
 
-    .reveal table td {
+    .reveal table:not(.hljs-ln) td {
       border-width: 1px;
       padding-left: 10px;
       padding-right: 25px;
@@ -495,8 +495,12 @@ $endif$
           RevealNotes,
           RevealSearch,
           RevealZoom,
+$if(plugin-chalkboard)$
           RevealChalkboard,
+$endif$
+$if(plugin-menu)$
           RevealMenu,
+$endif$
           RevealFullscreen,
           RevealEmbedTweet
         ]
