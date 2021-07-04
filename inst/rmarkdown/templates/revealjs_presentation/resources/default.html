@@ -385,18 +385,28 @@ $endif$
 $if(menu-markers)$
           markers: $menu-markers$,
 $endif$    
-//$if(menu-custom)$
-//          custom: $menu-custom$,
-//$endif$
-//$if(menu-themes)$
-//          themes: $menu-themes$,
-//$endif$
+$if(menu-custom)$
+          custom: $menu-custom$,
+$else$
+$-- if not defined, set false as a default.
+          custom: false,
+$endif$
+$if(menu-themes)$
+          themes: $menu-themes$,
+$else$
+$-- if not defined, set false as a default.
+          themes: false,
+$endif$
 $if(menu-themesPath)$
           themesPath: '$menu-themesPath$',
 $endif$
-//$if(menu-transitions)$
-//          transitions: $menu-transitions$,
-//$endif$
+$if(menu-transitions)$
+          transitions: $menu-transitions$,
+$else$
+$-- if not defined, set false as a default.
+  transitions: false
+$endif$
+
 $if(menu-openButton)$
           openButton: $menu-openButton$,
 $endif$    
@@ -421,9 +431,6 @@ $endif$
 $if(menu-loadIcons)$
           loadIcons: $menu-loadIcons$,
 $endif$
-          custom: false,
-          themes: false,
-          transitions: false
         },
 
 $endif$
@@ -431,11 +438,26 @@ $endif$
 $if(plugin-chalkboard)$
 
         chalkboard: {
+$if(chalkboard-boardmarkerWidth)$
+          boardmarkerWidth: $chalkboard-boardmarkerWidth$,
+$endif$
+$if(chalkboard-chalkWidth)$
+          chalkWidth: $chalkboard-chalkWidth$,
+$endif$
+$if(chalkboard-chalkEffect)$
+          chalkEffect: $chalkboard-chalkEffect$,
+$endif$
+$if(chalkboard-storage)$
+          storage: $chalkboard-storage$,
+$endif$
 $if(chalkboard-src)$
           src: $chalkboard-src$,
 $endif$
 $if(chalkboard-readOnly)$
           readOnly: $chalkboard-readOnly$,
+$endif$
+$if(chalkboard-messageType)$
+          messageType: "$chalkboard-messageType$",
 $endif$
 $if(chalkboard-toggleNotesButton)$
           toggleNotesButton: $chalkboard-toggleNotesButton$,
@@ -443,21 +465,33 @@ $endif$
 $if(chalkboard-toggleChalkboardButton)$
           toggleChalkboardButton: $chalkboard-toggleChalkboardButton$,
 $endif$
+$if(chalkboard-colorButtons)$
+          colorButtons: $chalkboard-colorButtons$,
+$endif$
+$if(chalkboard-boardHandle)$
+          boardHandle: $chalkboard-boardHandle$,
+$endif$
 $if(chalkboard-transition)$
           transition: $chalkboard-transition$,
 $endif$
 $if(chalkboard-theme)$
           theme: "$chalkboard-theme$",
 $endif$
-//$if(chalkboard-color)$
-//          color: $chalkboard-color$,
-//$endif$
 $if(chalkboard-background)$
           background: $chalkboard-background$,
 $endif$
-//$if(chalkboard-pen)$
-//          pen: $chalkboard-pen$,
-//$endif$
+$if(chalkboard-grid)$
+          grid: $chalkboard-grid$,
+$endif$
+$if(chalkboard-eraser)$
+          eraser: $chalkboard-eraser$,
+$endif$
+$if(chalkboard-boardmarkers)$
+          boardmarkers: $chalkboard-boardmarkers$,
+$endif$
+$if(chalkboard-chalks)$
+        chalks: $chalkboard-chalks$,
+$endif$
         },
 $endif$
 
