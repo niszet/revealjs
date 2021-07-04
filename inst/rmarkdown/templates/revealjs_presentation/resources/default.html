@@ -148,9 +148,15 @@ $body$
   <script src="$revealjs-url$/dist/reveal.js"></script>
 
   <!-- reveal.js plugins -->
+$if(plugin-notes)$
   <script src="$revealjs-url$/plugin/notes/notes.js"></script>
+$endif$  
+$if(plugin-search)$
   <script src="$revealjs-url$/plugin/search/search.js"></script>
+$endif$  
+$if(plugin-zoom)$
   <script src="$revealjs-url$/plugin/zoom/zoom.js"></script>
+$endif$  
 
 $if(plugin-fullscreen)$
   <script src="$revealjs-url$/plugin/fullscreen/plugin.js"></script>
@@ -533,9 +539,15 @@ $endif$
 $if(plugin-revealmarkdown)$
           RevealMarkdown,
 $endif$
+$if(plugin-notes)$
           RevealNotes,
+$endif$  
+$if(plugin-search)$
           RevealSearch,
+$endif$  
+$if(plugin-zoom)$
           RevealZoom,
+$endif$  
 $if(plugin-chalkboard)$
           RevealChalkboard,
 $endif$
