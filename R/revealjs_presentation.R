@@ -175,7 +175,7 @@ revealjs_presentation <- function(incremental = FALSE,
       stop("Using reveal_plugins requires self_contained: false")
     
     # validate specified plugins are supported
-    supported_plugins <- c("notes", "search", "zoom", "chalkboard", "menu", "highlightjs", "embed-tweet", "fullscreen")
+    supported_plugins <- c("notes", "search", "zoom", "chalkboard", "menu", "highlightjs", "embed-tweet", "fullscreen", "revealmarkdown")
     invalid_plugins <- setdiff(reveal_plugins, supported_plugins)
     if (length(invalid_plugins) > 0)
       stop("The following plugin(s) are not supported: ",
