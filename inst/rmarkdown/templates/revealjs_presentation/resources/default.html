@@ -178,7 +178,9 @@ $endif$
 $if(mathjax)$
   <script src="$revealjs-url$/plugin/math/math.js"></script>
 $endif$
-
+$if(plugin-revealmarkdown)$
+  <script src="$revealjs-url$/plugin/markdown/markdown.js"></script>
+$endif$
   <script>
 
       // Full list of configuration options available at:
@@ -541,13 +543,13 @@ $if(plugin-revealmarkdown)$
 $endif$
 $if(plugin-notes)$
           RevealNotes,
-$endif$  
+$endif$
 $if(plugin-search)$
           RevealSearch,
-$endif$  
+$endif$
 $if(plugin-zoom)$
           RevealZoom,
-$endif$  
+$endif$
 $if(plugin-chalkboard)$
           RevealChalkboard,
 $endif$
